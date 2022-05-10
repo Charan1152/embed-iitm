@@ -1,0 +1,46 @@
+<html>
+    <head>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+        <style>
+        #f{
+            font-family: 'Montserrat';font-size: 22px;
+        }
+        input[type=text] {
+        padding: 12px 20px;
+        margin: 8px 0;
+        box-sizing:border-box;
+        font-weight: bold;
+        }
+        #button{
+        background-color: white; 
+        border: 2px solid black;
+        color: black;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        border-radius: 10%;
+        font-family: 'Montserrat';
+        }
+        body{background-color: '#ffffff';text-align: center;}
+    </style>
+    </head>
+    <body>
+        <div id="f">
+        <form id="check" action="/mailsub" method="post">
+            <b style="color:black;">Enter IITM Roll No: </b><input placeholder="2xfxxxxxxx or 2xdsxxxxxxx" name="mailid" type="text"></input><br>
+            <input id="button" type="submit" value="SUBMIT"></input>
+        </form>
+        {% if f==True :%}
+            <h3>Hurray, your room is confirmed!!<br>
+                Hope you have a nice stay at the campus!</h3>
+                <h4>Thanks for using this application. Happy Campus Visit to You!</h4>
+        {% endif %}
+        {% if f==False :%}
+            <h3>Your Room is still not confirmed.. Keep checking here for regularly!</h3>
+            <h4>Thanks for using this application. Happy Campus Visit to You!</h4>
+        {% endif %}
+        </div>
+</body>
+</html>
